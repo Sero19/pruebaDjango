@@ -1,0 +1,26 @@
+<html>
+<link rel="stylesheet" href="">
+
+<body>
+    <form method="GET">
+        Nombre:
+        <input type="text" name="nombre">
+        <input type="submit" value="Buscar">
+    </form>
+
+    <h2>Resultado: {{nombre|safe}}</h2>
+
+
+    <!-- <img src="https://media.giphy.com/media/26tk0jALFpsXmAF8c/giphy.gif" alt=""> -->
+    <!-- Busqueda -->
+    <script type="application/javascript">
+        var busqueda = new URLSearchParams(document.location.search);
+        if (busqueda.has("nombre")) {
+            document.getElementById("resultado").innerHTML = "Resultados de la busqueda: " + busqueda.get("nombre");
+        }
+    </script>
+    <!-- fin de Busqueda -->
+
+</body>
+
+</html>

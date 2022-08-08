@@ -1,0 +1,66 @@
+{% extends 'inicio/encabezado.html' %} {% block titulo %} CONTACTO {% endblock %} {% block imagen %} {%load static%} {%static 'inicio/imagenes/contacto.png'%} {% endblock %} {% block text %} Contact <span>TIC</span> {% endblock %} {% block encabezado
+    %} {% block encabezado %}
+    
+    
+    <!--Encabezdo -->
+    <div class="page-header">
+        <div class="page-title">
+            <h3>Registro Alumnos
+                <small>Ingresa tu información</small></h3>
+        </div>
+    
+    </div>
+    <!-- /Encabezado-->
+    
+    {% endblock %} {% block contenido %}
+    
+    
+    <!-- Formulario -->
+    <form class="form-horizontal" action="{% url 'RegistrarAlumno' %}" method="POST" role="form">
+        {%csrf_token%}
+        <div class="panel panel-default">
+            <div class="panel-body">
+    
+                <div class="form-group">
+                    <label class="col-sm-2 control-label text-right">Matricula:</label>
+                    <div class="col-sm-10">
+                        <input name="matricula" type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label text-right">Nombre:</label>
+                    <div class="col-sm-10">
+                        <input name="nombre" type="text" class="form-control">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label text-right">Carrera:</label>
+                    <div class="col-sm-10">
+                        <input name="carrera" type="text" class="form-control">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label text-right">Turno:</label>
+                    <div class="col-sm-10">
+                        <input name="turno" type="text" class="form-control">
+                    </div>
+                </div>
+
+    
+    
+                <div class="form-actions text-right">
+                    <input type="submit" value="Enviar" class="btn btn-primary">
+                </div>
+    
+            </div>
+        </div>
+    </form>
+    <!-- Fin del Formulario -->
+    
+    
+    
+    
+    
+    {% endblock %}
