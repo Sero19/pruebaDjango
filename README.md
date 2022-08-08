@@ -1,0 +1,2 @@
+# pruebaDjango
+registro de prueba
